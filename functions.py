@@ -20,6 +20,8 @@ def img_bw(image):
     img = cv2.threshold(image, 70, 255, cv2.THRESH_BINARY)[1]
     return img;
 
+def img_HSV(image):
+    return cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
 
 def show_img(image):
     #print_size(image)

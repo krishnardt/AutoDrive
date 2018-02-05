@@ -50,8 +50,11 @@ for i in lines:
 fn.show_img(roads)
 
 '''
+midX = roads.shape[1]
+midY = roads.shape[0]
 for i in lines:
     x1, y1, x2, y2 = i[0]
+    
     if (x2-x1 > 50 or y2-y1 > 120):
         print(i)
         cv2.line(roads,(x1,y1),(x2,y2),(0,255,0),2)
